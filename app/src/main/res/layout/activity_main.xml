@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nitw.ac.in.notetakingapp.MainActivity">
+
+
+    <com.andexert.expandablelayout.library.ExpandableLayout
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerLayout="@layout/view_header"
+        app:contentLayout="@layout/view_content" />
+
+
+    <com.andexert.expandablelayout.library.ExpandableLayoutListView
+        android:id="@+id/list_item"
+        android:layout_below="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="match_parent"/>
+
+    <!--<ListView-->
+        <!--android:id="@+id/list_item"-->
+
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="hey"/>-->
+
+    <!--</ListView>-->
+
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/circleButton"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:onClick="addNote"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:padding="15dp"
+        android:src="@drawable/plus"
+        app:cb_color="?attr/actionMenuTextColor"
+        app:cb_pressedRingWidth="8dip"
+
+        />
+
+
+</RelativeLayout>
